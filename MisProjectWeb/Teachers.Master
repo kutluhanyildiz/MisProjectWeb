@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Teachers.master.cs" Inherits="MisProjectWeb.Teachers" %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>MARMARA UNIVERSITY EXAM RESULTS SYSTEM</title>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="Dosyalar1/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Our Custom CSS -->
+    <link href="Dosyalar1/StyleSheet2.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>MARMARA UNIVERSITY STUDENT ADMINISTRATION PANEL</h3>
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-home"></i>
+                        Student Affairs
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li><a href="WebForm1.aspx"><i class="glyphicon glyphicon-list"></i>Student List</a></li>
+                        <li><a href="AddStudent.aspx"><i class="glyphicon glyphicon-arrow-right"></i>Add a student</a></li>
+                        <li><a href="FindStudent.aspx"><i class="glyphicon glyphicon-search"></i>Find a student by searching</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="LessonList.aspx">
+                        <i class="glyphicon glyphicon-briefcase"></i>
+                        Courses
+                    </a>
+                    <li class="active">
+                        <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                            Messages
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu3">
+                            <li><a href="Inbox.aspx"><i class="glyphicon glyphicon-inbox"></i>Inbox</a></li>
+                            <li><a href="Outbox.aspx"><i class="glyphicon glyphicon-send"></i>Outbox</a></li>
+                            <li><a href="NewMessage.aspx"><i class="glyphicon glyphicon-pencil"></i>New Message</a></li>
+
+                        </ul>
+                    </li>
+
+                <li class="active">
+                    <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-bell"></i>
+                        Announcements
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu2">
+                        <li><a href="AnnouncementList.aspx"><i class="glyphicon glyphicon-list"></i>Announcement List</a></li>
+                        <li><a href="AddAnnouncement.aspx"><i class="glyphicon glyphicon-arrow-right"></i>Add an announcement</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="GradeList.aspx">
+                        <i class="glyphicon glyphicon-book"></i>
+                        Grades
+                    </a>
+                </li>
+                <li>
+                    <a href="Stats.aspx">
+                        <i class="glyphicon glyphicon-education"></i>
+                        Status
+                    </a>
+                </li>
+                <li>
+                    <a href="Graphs.aspx">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                        Graphs
+                    </a>
+                </li>
+                <li>
+                <li>
+                    <a href="LoginPanel.aspx">
+                        <i class="glyphicon glyphicon-log-out"></i>
+                        Log out
+                    </a>
+                </li>
+            </ul>
+
+
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- jQuery CDN -->
+    <script src="Dosyalar1/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="Dosyalar1/js-bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
